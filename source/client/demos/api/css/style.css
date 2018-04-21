@@ -1,0 +1,22 @@
+#supportWrapper{
+    position: fixed;
+    width: 100%;
+    top: auto;
+    bottom: 0px;
+    right: 0px;
+    left: auto;
+}
+
+#mgVideoChat .container{
+    width: 100%;
+}
+
+.modal-backdrop{
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+    #supportWrapper{
+        width: 700px;
+    }    
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Magnoliyan Video Chat</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../mgVideoChat/mgVideoChat-1.13.0.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>MgVChat <small>Tech Support</small></h1>
+            <div class="alert alert-info" role="alert">
+                <p>User operator1/operator1 for demo login. To check a visitor's view open <a href="index.html" target="_blank">page</a> in other browser (ex. Chrome for visitor, FF for operator)</p>
+            </div>
+        </div>
+        <div id="mgVideoChat"></div>        
+        
+        <div id="operatorLoginDialog" class="modal fade" data-focus-on="input:first" style="display: none">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <label class="sr-only" for="userName">Username</label>
+                        <input id="userName" class="form-control" type="text" data-tabindex="1" placeholder="Username">
+                        <label class="sr-only" for="userName">Password</label>
+                        <input id="password" class="form-control" type="password" data-tabindex="2" placeholder="Password">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary login">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+        <!-- Video Chat -->
+        <script src="../../mgVideoChat/mgVideoChat-1.13.0-min.js"></script>
+        <script src="../common/js/menu.js"></script>
+        <script>
+            //set cookie via javascript
+            function setCookie( cookieName, cookieValue, days, domain){
+                var domainString = domain ? ("; domain=" + domain) : '';
+                document.cookie = cookieName + "=" + encodeURIComponent(cookieValue) + "; max-age=" + (60 * 60 * 24 * days) + "; path=/" + domainString;
+            };
+            var cookies = null;
+            //get cookie
+            function getCookie(name,c,C,i){
+                if(cookies){ return cookies[name]; }
+                c = document.cookie.split('; ');
+                cookies = {};
+                for(i=c.length-1; i>=0; i--){
+                    C = c[i].split('=');
+                    cookies[C[0]] = C[1];
+                }
+                return cookies[name];
+            }
+
+            $(document).ready(function(){
+                //focus username in dialog
+                $('#operatorLoginDialog').on('shown.bs.modal',function(){
+                    $('#operatorLoginDialog').find('#userName').focus();
+                });
+                //execute on login
+                var onLogin = function(){
+                    if($('#operatorLoginDialog').find('#userName').val()){
+                        //set cookies for the server
+                        setCookie('mgVideoChatSimpleUser', $('#operatorLoginDialog').find('#userName').val(), 30, window.location.host);
+                        setCookie('mgVideoChatSimplePass', $('#operatorLoginDialog').find('#password').val(), 30, window.location.host);
+                        $('#operatorLoginDialog').modal('hide');
+                        //reload to use new cookies
+                        window.location.reload();
+                    }
+                };
+                //submit on enter key
+                $('#operatorLoginDialog').find('#userName,#password').keypress(function(e){
+                    if (e.keyCode === 13) {
+                        onLogin();
+                        return false;
+                    }
+                })
+                $('#operatorLoginDialog').find('button.login').click(onLogin);
+            });
+
+            //reset visitor cookie
+            var cookie = getCookie('mgVideoChatSimple')
+            if(cookie){
+                setCookie('mgVideoChatSimple','', 30, window.location.host);
+                window.location.reload();
+            }
+            
+            $(document).ready(function(){
+                //init video chat
+                $('#mgVideoChat').mgVideoChat({
+                    wsURL: wsUrlDefault + '?room=4',
+                    login: function(callback){
+                        $('#operatorLoginDialog').modal('show');
+                    }
+                });
+            });
+        </script>        
+    </body>
+</html>

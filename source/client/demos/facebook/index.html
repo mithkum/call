@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Magnoliyan Video Chat</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../mgVideoChat/mgVideoChat-1.13.0.css">
+    </head>
+    <body>
+        <!-- FACEBOOK section -->
+        <div id="fb-root"></div>
+        <script>
+        // Additional JS functions here
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : 'your_fb_app_id',
+                status     : true, // check login status
+                cookie     : true,  // enable cookies to allow the server to access
+                xfbml      : true,  // parse social plugins on this page
+                version    : 'v2.1' // use version 2.1
+            });
+        };
+        // Load the SDK asynchronously
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        <div class="container">
+            <h1>MgVChat <small>Facebook</small></h1>
+            <div class="alert alert-info" role="alert">If no one else is in the room, please open the same page in other tab to do self-test.</div>
+            <div id="mgVideoChat"></div>
+        </div>
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+        <!-- Video Chat -->
+        <script src="../../mgVideoChat/mgVideoChat-1.13.0-min.js"></script>
+        <script src="../common/js/menu.js"></script>
+        <script>
+            $(document).ready(function(){                
+                $('#mgVideoChat').mgVideoChat({
+                    wsURL: wsUrlDefault + '?room=2',
+                    login: function(callback){
+                        //check status
+                        FB.getLoginStatus(function(response) {
+                            //connected already
+                            if (response.status === 'connected') {
+                                window.location.reload();
+                                //callback();
+                            }
+                            //login now
+                            else{
+                                FB.login(function(response) {
+                                    if (response.authResponse) {
+                                        //callback();
+                                        window.location.reload();
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            });
+        </script>        
+    </body>
+</html>

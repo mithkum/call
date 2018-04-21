@@ -1,0 +1,1704 @@
+<!doctype html>
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+
+	<title>Magnoliyan Video Chat PRO - HTML5 video chat system</title>
+
+	<meta name="description" content="pro video more fun">
+	<meta name="author" content="Magnoliyan">
+	<meta name="copyright" content="Magnoliyan">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2015-01-10T00:00:00+01:00">
+
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
+	<script src="assets/js/google-code-prettify/prettify.js"></script>
+
+
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+	<script src="assets/js/jquery.js"></script>
+
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url(assets/images/image_1.png);}
+		a{color:#0000FF;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -ms-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -webkit-gradient(linear, 0 0, 0 0088CC%, from(#DDDDDD), to(#0044CC));
+			  background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -o-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: linear-gradient(top, #0088CC, #0044CC);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0);
+			  border-color: #0044CC #0044CC #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #0088CC #0088CC #bfbfbf;
+		  background-color: #0044CC;
+		}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#DDDDDD;color:#222222;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+		#documenter_sidebar ul{border-top:1px solid #AAAAAA;}
+		#documenter_sidebar ul a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+		#documenter_sidebar ul a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_sidebar ul a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+
+</head>
+<body class="documenter-project-magnoliyan-video-chat">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+
+			<li><a href="#general" title="General">General</a></li>
+			<li><a href="#quick_start_guide" title="Quick Start Guide">Quick Start Guide</a></li>
+            <!--<li><a href="#alternative_php_install" title="Alternative PHP Install">Alternative PHP Install</a></li>-->
+            <li><a href="#requirements" title="Requirements">Requirements</a></li>
+            <li><a href="#HTTPS,-SSL,-WSS" title="HTTPS, SSL, WSS">HTTPS, SSL, WSS</a></li>
+            <li><a href="#server_management" title="Server Management">Server Management</a></li>			
+			<li><a href="#options" title="Options">Options</a></li>
+            <li><a href="#custom_authorization" title="Custom Authorization">Custom Authorization</a></li>
+            <li><a href="#media_issues" title="Media Issues">Media Issues</a></li>
+			<li><a href="#examples" title="Examples">Examples</a></li>
+			<li><a href="#sources_and_credits" title="Sources and Credits">Sources and Credits</a></li>
+
+		</ul>
+		<div id="documenter_copyright">Copyright Magnoliyan 2015<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v2.0</a>
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+	<h1>Magnoliyan Video Chat PRO</h1>
+	<h2>HTML5 video chat system</h2>
+	<div id="documenter_buttons">
+
+	</div>
+	<hr>
+	<ul>
+	<li>created: 05 Jan 2014</li>
+	<li>latest update: 10 Jan 2015</li>
+	<li>by: Magnoliyan</li>
+	<li><a href="http://www.magnoliyan.com/video-chat-pro/">www.magnoliyan.com/video-chat-pro</a></li>
+    <li>support: check first <a href="http://www.magnoliyan.com/video-chat-pro/#FAQ">FAQ</a></li>
+	<li>email: <a href="mailto:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#109;&#97;&#103;&#110;&#111;&#108;&#105;&#121;&#97;&#110;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#109;&#97;&#103;&#110;&#111;&#108;&#105;&#121;&#97;&#110;&#46;&#99;&#111;&#109;</a></li>
+	</ul>
+	<p>Thank you for purchasing this app.</p>
+	</section>
+
+	<section id="general">
+	<div class="page-header"><h3>General</h3><hr class="notop"></div>
+<p>
+	<strong>Magnoliyan Video Chat PRO</strong> (mgVideoChat) is full featured video communication system with integrated text chat, available directly within your web browser. You can consider it as <em>online web based Skype</em>, but without the requirement to install any additional software, plugin nor flash.</p>
+<p>
+	There is unlimited number of use cases: online live video chat support, private rooms, community chat rooms...</p>
+<p>Compared to <em>standard Video Chat</em> PRO version features: <strong>group</strong> (conference) video chat, <strong>file transfer</strong>, chat <strong>roulette</strong> mode</p>
+<p>Unlike some other systems, Magnoliyan Video Chat PRO includes <strong>full featured server side "signaling" engine</strong>: you can see who is online, click to call, click to end call, send text messages. You can even mark certain users as <em>operators</em> which are able to receive calls while all others can just make calls.</p>
+<p>
+	Unlike some other systems, Magnoliyan Video Chat PRO includes <strong>full featured server side &quot;signaling&quot; engine</strong>: you can see who is online, click to call, click to end call, send text messages. You can even mark certain users as <em>operators</em> who are able to receive calls, while all others can just make calls - perfect for tech support.</p>
+<p>
+	In order to disallow anonymous users, there is special <em>plugin system</em> for authorization of visitors. You can easily customize it with your own web app login mechanism. Still, Magnoliyan Video Chat PRO comes with built in support for <strong>facebook login</strong> and <strong>wordpress</strong> accounts. It&#39;s even possible to use different authorization system per chat room.</p>
+
+    <h4>Architecture</h4>
+    <img src="assets/images/deployment.png" alt="Deployment" />
+    <p>Magnoliyan PHP chat server is websocket signaling central components. Magnoliayan jquery client script is HTML5 WebRTC app. Media (video/audio) communication is done directly (if possible) by the means of STUN servers. If direct traffic is not possible TURN servers are involved.</p>
+    
+</section>
+<section id="quick_start_guide">
+	<div class="page-header"><h3>Quick Start Guide</h3><hr class="notop"></div>
+<h3>
+	Server side</h3>
+<h4 id="quick_start_guide_step_1_copy_files">Step 1: copy files</h4>
+<p>
+	Copy <strong>source/server</strong> folder contents to your domain.</p>
+<h4 id="quick_start_guide_step_2_install_libraries">Step 2: install libraries</h4>
+<p>
+	Login to your server using ssh (<a href="http://www.siteground.com/tutorials/ssh/" target="_blank">ssh tutorials</a>), enter the copied folder and run</p>
+<p>
+	<code>php ~/composer.phar install</code></p>
+<p>
+	If you don&#39;t have <em>composer</em> installed please read <a href="http://getcomposer.org/download/" target="_blank">this tutorial</a> for more information.</p>
+<!--<p>Installing over <em>composer</em> is preffered method. However, if you for any reason have problems with it you can try <a href="#alternative_php_install">Alternative PHP Install</a></p>-->
+<h4 id="quick_start_guide_step_3_run_the_server">Step 3: run the server</h4>
+<p>
+	<code>php bin/chat-server.php</code></p>
+<h3>
+	Client side</h3>
+<h4 id="quick_start_guide_step_1_copy_files">Step 1: copy files</h4>
+<p>
+	Copy <strong>source/client</strong> folder contents to your domain&#39;s public folder.</p>
+
+<h4>Step 2: create html page</h4>
+<p> Create standard html which should contain at least a container element for the video chat, ex
+<pre class="prettyprint lang-brush: html">&lt;div id=&quot;mgVideoChat&quot;&gt;&lt;/div&gt;</pre>
+
+<h4 id="quick_start_guide_step_2_link_file_in_a_page">Step 3: link file in a page</h4>
+<p>
+	First we need to include files mgVideoChat depends on, and then mgVideoChat itself:</p>
+<pre class="prettyprint lang-prettyprint lang-brush: html">
+&lt;!-- CSS --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;mgVideoChat/mgVideoChat-1.13.0.css&quot;&gt;
+
+&lt;!-- JS --&gt;
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;mgVideoChat/mgVideoChat-1.13.0-min.js&quot;&gt;&lt;/script&gt;
+</pre>
+<h4 id="quick_start_guide_step_3_start_mgvideochat">Step 4: start mgVideoChat</h4>
+<p>
+	All that is left is to initiate mgVideoChat plugin on the proper html element, when the document is ready:</p>
+<pre class="prettyprint lang-prettyprint lang-brush: javascript">
+$(document).ready(function(){
+    $(&#39;#mgVideoChat&#39;).mgVideoChat({
+        wsURL: &#39;ws://www.myserverdomain.com:8080?room=1&#39; //domain:port and room id info
+    });
+});
+</pre>
+
+    <div class="alert alert-warning" role="alert">
+        <strong>Heads up!</strong> First make sure the system is properly installed and running over regular
+        <strong>http</strong> and the read and apply one of the measures needed to run it over <strong>https</strong>
+        as explained <a href="#HTTPS,-SSL,-WSS">here</a>.
+    </div>
+
+    <p>Please <a href="#options">read more details</a> about client configuration options.</p>
+</section>
+
+<!--<section id="alternative_php_install">
+	<div class="page-header"><h3>Alternative PHP Install</h3><hr class="notop"></div>
+    
+    <p>Installing over <em>composer</em> is preferred method. However, if you for any reason have problems with it you can:</p>
+
+    <h4>Step 1: copy files</h4>
+    <p>Copy <strong>source/server</strong> folder contents to your domain.</p>
+
+    <h4>Step 2: copy <em>vendors</em> content</h4>
+    <p><a href="http://www.magnoliyan.com/video-chat-pro/vendors/vendor-content-php-5.4.6.zip" target="_blank">Download zip</a> file and unzip its content in <strong>source/server/vendor</strong> folder.</p>
+
+    <p>Now you can run your server as defined in the Quick Start Guide or you can try <em>Web Commander</em></p>
+
+    <h4>Step 3: start via Web Commander</h4>
+    <p>Update file <code>source/web-commander/config.php</code> especially with custom username and password (default: admin/admin).</p>
+    <p>From your web browser <a href="source/web-commander/index.php" target="_blank">open</a> <code>source/web-commander/index.php</code> and click <strong>Start</strong></p>
+    <img src="assets/images/web-cmd-1.png" />
+    <img src="assets/images/web-cmd-2.png" />
+
+    <h4>Step 4: test websocket connection</h4>
+    <p>After the server is started you will be able to test websocket connection from the panel on the right.</p>
+    <p>Update domain and/or port property according to your server's setup and click to test.</p>
+    <p>If connection is successful you can update examples' source code with the same websocket parameters and open them.</p>
+    
+    <h4>Step 5: check log file</h4>
+    <p>By default, when started from webcommander, the server output will be logged in <em>web-commander.log</em> file in the web-commander's folder. In order for this to work, the log file has to be writable by webserver.
+        If you prefer, you can define other file path for loggin in web-commander's <em>config.php</em> file in key <strong>log_file</strong>.</p>
+
+    <p>Please <a href="#options">read more details</a> about server configuration options in <strong>bin/config.php</strong> file</p>
+
+</section>-->
+        
+<section id="requirements">
+	<div class="page-header"><h3>Requirements</h3><hr class="notop"></div>
+<p>
+	This app uses the following Javascript libraries:</p>
+<ul>
+	<li>
+		<a href="http://jquery.com/" target="_blank">jQuery</a></li>
+	<li>
+		<a href="http://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+</ul>
+<p>
+	This app uses the following PHP library:</p>
+<ul>
+	<li>
+		<a href="http://socketo.me/" target="_blank">Ratchet</a></li>
+</ul>
+<p>
+	In order to run <em>Magnoliyan Video Chat PRO</em> server side you need:</p>
+        <ul>
+            <li><strong>https</strong> (ssl certificate). Since Chrome 47 getting a camera/mic access is allowed only over https.
+                The server part of the system itself cannot run over https (wss for websockets),
+                though there's possible 3rd party work-arounds described <a href="#HTTPS,-SSL,-WSS">here</a>. You should already make sure you will be able to apply one of them.</li>            
+            <li>Dedicated or virtual server with *Nix platform</li>
+            <li>shell access on the server</li>
+            <li>PHP 5.3.9 (or higher) is required. PHP 5.4 is highly recommended for its performance improvements</li>
+            <li>Available port open on a firewall, for example 8080</li>
+            <li>Above average php5 and linux knowledge. You should be familiar with terms like linux shell, IP, domain, port, daemon, firewall to run this software.</li>
+            <li>Due to the direct media P2P communication limitations you might need to install and run your own TURN server. You can use this open source implementation <a href="https://code.google.com/p/coturn/" target="_blank">here</a></li>
+        </ul>
+<p>
+	In order to run <em>Magnoliyan Video Chat PRO</em> client side you need to:</p>
+<ul>
+	<li>host it on a domain (even local/private virtual domain can work for testing purposes)</li>
+	<li>for facebook authorization, create your own facebook login app pointing to that domain. Please read <a href="https://developers.facebook.com/docs/facebook-login/getting-started-web/" target="_blank">this tutorial</a> for more information</li>
+	<li>newer modern browsers like Chrome or Firefox (excluding IE) which support HTML5 technologies: WebSocket, RTCPeerConnection, UserMedia</li>
+    <li>Average javascript knowledge. You should be familiar with browser's error console</li>
+</ul>
+</section>
+
+<section id="HTTPS,-SSL,-WSS">
+<h3>HTTPS, SSL, WSS</h3>
+<p>Since Chrome 47 a camera/mic access is allowed only over https. For that reason you will be forced to use HTTPS protocol only.<br>
+Further, if you use HTTPS for your website, browser will not allow any other non-secure communication. So websocket communication must be secure as well, it must use <code>wss</code> instead of ws protocol.</p>
+
+<p>The server part of the system itself cannot run wss (ws over ssl) for websockets, though there are possible 3rd party work-arounds with proxies described <a href="http://stackoverflow.com/questions/16979793/php-ratchet-websocket-ssl-connect/16993247#16993247" target="_blank">here</a>. You should already make sure you will be able to apply one of them.</p>
+
+            <p>If you are already using <strong>Apache</strong>, the easiest way might be to use it as a proxy.                
+                In order to achive this you can enable Apache's <em>proxy_wstunnel</em> (<code>sudo a2enmod proxy_wstunnel</code>).
+                In your domain .conf file (the actual file might vary on different OS) you can add, usually next to where you ssl certificate is defined:</p>
+
+<code>
+    SSLProxyEngine On<br>
+    ProxyPass /wss/ ws://www.your_domain.com:8080/
+</code><br>
+
+            <p>For <strong>nginx</strong> things are similar, in the domain config you should add:</p>
+            <pre>
+<code>location /wss/ {
+    proxy_pass http://www.your_domain.com:8080;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+    proxy_read_timeout 86400;
+}</code>
+            </pre><br>            
+            <br>
+<br>
+It's important to include the same proxy path, e.g. <code>/wss/</code> in wsURL parameter.<br>
+<pre class="prettyprint lang-brush: javascript">
+$(document).ready(function(){
+    $('#mgVideoChat').mgVideoChat({
+        wsURL: 'wss://www.your_domain.com/wss/?room=1'
+    });
+});</pre>
+</section>
+
+<section id="server_management">
+	<div class="page-header"><h3>Server Management</h3><hr class="notop"></div>
+    <p>
+        Video chat PRO server part is not conventional php page, but service which should run all the time in the background. So it's not triggered by web request, executed, killed but instead runs in the background as a process (service, daemon).
+        In order to run it you need to execute command from the linux shell. Not all web developers are comfortable working with shell. For those I suggest reading tutorials like <a href="http://www.siteground.com/tutorials/ssh/" target="_blank">http://www.siteground.com/tutorials/ssh/</a> or <a href="https://www.google.com/search?q=linux+shell+tutorial" target="_blank">similar</a>.
+        Here are a few topics which can help managing Video Chat PRO server side process.
+    </p>
+
+    <h4>Basics</h4>
+    <p>In order to run the process you have to enter folder <em>source/server/bin</em>. To start the process in there just type and hit enter:</p>
+    <code>
+        php chat-server.php
+    </code>
+
+    <h4>Start/Stop script</h4>
+    <p>In order to simplify starting and stopping of the process we provided <strong>run.sh</strong> shell script in the same folder. To start the process execute:</p>
+    <code>
+        ./run.sh start
+    </code>
+    <p>to stop:</p>
+    <code>
+        ./run.sh stop
+    </code>
+
+    <h4>Run in the background</h4>
+    <p>Usually you need to have the process running after you logout from the shell. Here's the command to help</p>
+    <code>
+        nohup php chat-server.php &
+    </code>
+
+    <h4>Log the output</h4>
+    <p>If you want to have log file here's the way</p>
+    <code>
+        nohup php chat-server.php > app.log &
+    </code>
+    <p>You might want to store more info with config option <em>debug</em> set as true</p>
+
+    <h4>Get process ID</h4>
+    <p>To check if th process is running and get its id (pid) execute:</p>
+    <code>
+        ps aux | grep [c]hat-server
+    </code>
+    <p>The number in the second column should be process id (pid).</p>
+
+    <h4>Stop (kill) the process</h4>
+    <p>After obtaining the process id you can execute</p>
+    <code>
+        kill -9 pid
+    </code>
+    <p>Where pid should be replaced with actual value.</p>
+</section>
+
+
+<section id="options">
+	<div class="page-header"><h3>Options</h3><hr class="notop"></div>
+<h3>
+	Client</h3>
+<p>
+	jQuery plugin options array.</p>
+<table class="documentation" id="optionsTable">
+	<thead>
+		<tr>
+			<th>
+				option</th>
+			<th>
+				description</th>
+			<th>
+				default</th>
+			<th>
+				possible values</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>
+				wsURL</th>
+			<td>
+				Websocket URL to your server in format ws://<strong>domain</strong>:<strong>port</strong>?room=<strong>roomNumber</strong></td>
+			<td>
+				ws://localhost:8080?room=1</td>
+			<td>
+				string</td>
+		</tr>
+		<tr>
+			<th>
+				debug</th>
+			<td>
+				Log messages to JS console</td>
+			<td>
+				false</td>
+			<td>
+				boolean</td>
+		</tr>
+		<tr>
+			<th>
+				login</th>
+			<td>
+				function called on Login button - ex. custom popup, redirect to login page, etc.</td>
+			<td>
+				null</td>
+			<td>
+				function</td>
+		</tr>
+		<tr>
+			<th>
+				tplMain</th>
+			<td>
+				URL to the main template relative to the running page</td>
+			<td>
+				/tpls/main.html</td>
+			<td>
+				string</td>
+		</tr>
+		<tr>
+			<th>
+				tplConnections</th>
+			<td>
+				URL to the connections template relative to the running page</td>
+			<td>
+				/tpls/connections.html</td>
+			<td>
+				string</td>
+		</tr>
+		<tr>
+			<th>
+				tplConnection</th>
+			<td>
+				URL to the single connection template relative to the running page</td>
+			<td>
+				/tpls/connection.html</td>
+			<td>
+				string</td>
+		</tr>
+		<tr>
+			<th>
+				tplChat</th>
+			<td>
+				URL to the chat template relative to the running page</td>
+			<td>
+				/tpls/chat.html</td>
+			<td>
+				string</td>
+		</tr>
+        <tr>
+            <th>tplChatInput</th>
+            <td>URL to the chat input box template relative to the running page</td>
+            <td>/tpls/chat_input.html</td>
+            <td>string</td>
+        </tr>
+        <tr>
+            <th>tplFile</th>
+            <td>URL to the file progress template relative to the running page</td>
+            <td>/tpls/file.html</td>
+            <td>string</td>
+        </tr>
+        <tr>
+            <th>fileMaxSize</th>
+            <td>Maximum size in bytes for a file to be transfered</td>
+            <td>512000</td>
+            <td>integer</td>
+        </tr>
+		<tr>
+			<th>
+				sound.mp3</th>
+			<td>
+				URL to the mp3 ring sound file relative to the running page</td>
+			<td>
+				/sounds/ring.mp3</td>
+			<td>
+				string</td>
+		</tr>
+		<tr>
+			<th>
+				sound.ogg</th>
+			<td>
+				URL to the ogg ring sound file relative to the running page</td>
+			<td>
+				/sounds/ring.ogg</td>
+			<td>
+				string</td>
+		</tr>
+            <tr>
+                <th>enableNotifications</th>
+                <td>Enable desktop notifications when page is hidden</td>
+                <td>true</td>
+                <td>boolean</td>
+            </tr>                 
+	</tbody>
+</table>
+
+<h4>Events</h4>
+<p>Attach custom event handler to an event:</p>
+<pre class="prettyprint lang-brush: javascript">
+$('#mgVideoChat').mgVideoChat('on','connections',function(connections){
+console.log('[mgVideoChat.connections]fired',connections);
+});
+</pre>            
+
+<table id="optionsTable" class="documentation">
+    <thead>
+        <tr>
+            <th>event name</th>
+            <th>description</th>
+            <th>parameters</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>connections</th>
+            <td>fired each time new connection (peer) is added or removed</td>
+            <td><code>connections: Object</code><br>
+                object with all connections objects as sub-keys
+            </td>
+        </tr>
+        <tr>
+            <th>call_status</th>
+            <td>fired each time a call status with a peer changes</td>
+            <td>
+                <code>connectionId: int, status: string</code><br>
+                statuses: idle, call_inviting, call_invited, call_accepting,
+                call_accepted, sdp_offering, sdp_offered, sdp_answering,
+                sdp_answered, call                            
+            </td>
+        </tr>
+        <tr>
+            <th>chat_message</th>
+            <td>fired each time a new text message received</td>
+            <td>
+                <code>data: object</code><br>
+                Object containing
+                {connectionId: int, message: string}
+            </td>
+        </tr>
+        <tr>
+            <th>logged</th>
+            <td>fired when current user is logged in</td>
+            <td></td>
+        </tr>                    
+    </tbody>
+</table>
+
+<h3>Scripting</h3>
+<p>If you want to customize client side while reusing built-in functionality of jquery plugin you can leverage advanced javascript scripting api. Here are a few basic initial steps. For more details please inspect source code of <code>mgVideoChat-1.13.0-min.js</code> and its classes.</p>
+<pre class="prettyprint lang-brush: javascript">
+//global instaces of chat objects
+var rtc, mgChat;
+
+$(document).ready(function(){
+    //init plugin
+    mgChat = $('#mgVideoChat').mgVideoChat({
+        wsURL: 'ws://' + wsDomain + ':' + wsPort + '?room=1'
+    });
+    //attach to plugin events
+    //on call status change
+    $('#mgVideoChat').mgVideoChat('on','call_status',function(connectionId, status){
+        console.log('[mgVideoChat.call_status] fired',connectionId, status);
+    });
+    //on chat message
+    $('#mgVideoChat').mgVideoChat('on','chat_message',function(data){
+        console.log('[mgVideoChat.chat_message] fired', data);
+    });
+    //on logged in
+    $('#mgVideoChat').mgVideoChat('on','logged',function(){
+        console.log('[mgVideoChat.logged] fired');
+    });                
+    //get low level rtc object
+    rtc = mgChat.getRtc();
+    //attach to rtc object low level events
+    rtc.on('chat_message', function(data) {
+        console.log('[mgRtc.chat_message] fired', data);
+    });
+
+    $("#customSendMessage").click(function(){
+        //log peer connections
+        console.log(rtc.connections);
+        var message = prompt("Enter message text", "Message");
+        var connectionId = prompt("Enter destination connection id");
+        if(message && connectionId){
+            //use rtc object to send a message to a connection
+            rtc.chatMessage(connectionId, message);
+        }
+    });
+
+});
+</pre>
+
+<h3>RTC object methods</h3>
+<table id="optionsTable" class="documentation">
+    <thead>
+        <tr>
+            <th>method name</th>
+            <th>description</th>
+            <th>parameters</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>on</th>
+            <td>attach event listener</td>
+            <td>
+                <code>eventName: string, callback: function</code><br>
+            </td>
+        </tr>        
+        <tr>
+            <th>accept</th>
+            <td>accept call</td>
+            <td><code>connectionId: int, opt: Object</code><br>
+            </td>
+        </tr>
+        <tr>
+            <th>invite</th>
+            <td>initiate call</td>
+            <td>
+                <code>connectionId: int, opt: Object</code><br>                          
+            </td>
+        </tr>
+        <tr>
+            <th>busy</th>
+            <td>send busy signal</td>
+            <td>
+                <code>connectionId: int</code><br>
+            </td>
+        </tr>
+        <tr>
+            <th>drop</th>
+            <td>drop call</td>
+            <td>
+                <code>connectionId: int, leaveConnection: bool, leaveStream: bool</code><br>
+            </td>
+        </tr>
+        <tr>
+            <th>chatMessage</th>
+            <td>send text message</td>
+            <td>
+                <code>connectionId: int, messageText: string</code><br>
+            </td>
+        </tr>        
+    </tbody>
+</table>
+
+
+<h3>
+	Server</h3>
+<p>
+	PHP config.php options array.</p>
+<table class="documentation" id="optionsTable">
+	<thead>
+		<tr>
+			<th>
+				option</th>
+			<th>
+				description</th>
+			<th>
+				default</th>
+			<th>
+				possible values</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>
+				port</th>
+			<td>
+				Websocket server port</td>
+			<td>
+				8080</td>
+			<td>
+				integer</td>
+		</tr>
+		<tr>
+			<th>
+				debug</th>
+			<td>
+				Echo debug messages to the output</td>
+			<td>
+				false</td>
+			<td>
+				boolean</td>
+		</tr>
+		<tr>
+			<th>
+				allowedOrigins</th>
+			<td>
+				Array of domain names allowed to access your server. <em>null</em> allows all, but for production only your own domain should be allowed.</td>
+			<td>
+				null</td>
+			<td>
+				array</td>
+		</tr>
+		<tr>
+			<th>
+				IpBlackList</th>
+			<td>
+				Array of black-listed IP addresses not allowed to connect to the server.</td>
+			<td>
+				null</td>
+			<td>
+				array</td>
+		</tr>
+		<tr>
+			<th>
+				authAdapter</th>
+			<td>
+				Authorization adapter class name. Built-in classes are: <em>MgRTC\Session\AuthSimple<em>, <em>MgRTC\Session\AuthFacebook</em>, <em>MgRTC\Session\AuthWordpress<br>
+				<em>If custom authorization class is needed it can be easily developed. The class has to implement interface <strong>MgRTC\Session\AuthInterface</strong> and has to implement single function: </em></em></em></em>
+				<pre class="prettyprint lang-prettyprint lang-brush: php">
+<em><em><em><em>
+/**
+ * @param ConnectionInterface $conn
+ * @param array $cookies
+ * @return array
+ */
+function authUser(ConnectionInterface $conn, array $cookies);
+                            </em></em></em></em></pre>
+				<em><em><em><em>Built-in classes can serve as examples. Basically you should read <strong>$cookies</strong> to look for authorization info (sesson cookies). Also <strong>$conn-&gt;Config</strong> can be used to access global configuration settings if needed.<br>
+				If an user is notg authorized function should return <em>null</em>. Otherwise, return array with user info: </em></em></em></em>
+				<pre class="prettyprint lang-prettyprint lang-brush: php">
+<em><em><em><em>
+return array(
+    &#39;provider&#39;      =&gt; &#39;wordpress&#39;,
+    &#39;id&#39;            =&gt; $userInfo-&gt;ID,
+    &#39;email&#39;         =&gt; $userInfo-&gt;user_email,
+    &#39;name&#39;          =&gt; $userInfo-&gt;display_name
+);
+                            </em></em></em></em></pre>
+				<em><em><em><em>It should contain at least: provider name, user id, email, display name. </em></em></em></em></td>
+			<td>
+				MgRTC\<br>Session\<br>AuthSimple</td>
+			<td>
+				string</td>
+		</tr>
+        <tr>
+            <th>friendlistAdapter</th>
+            <td>
+                Friend-list adapter class name. This class is in charge to answer if one user is able to call/see other.<br>
+                For example, even when two users are connected in the same room your custom class could decide if they are able to see/chat with each other. The class has to implement interface <strong>MgRTC\Friendlist\CallableInterface</strong> and has to implement single function:
+                <pre class="prettyprint lang-brush: php">
+/**
+* If caller sees and can call callee
+* 
+* @param array $caller
+* @param array $callee
+* @return boolean
+*/
+function canCall(array $caller, array $callee);
+</pre>
+                Built-in <code>CallableOperator</code> can serve as example. Basically, based on users data you should be able to return true or false if one sees the other.
+            </td>
+            <td>MgRTC\<br>Friendlist\<br>CallableOperator</td>
+            <td>string</td>
+        </tr>         
+		<tr>
+			<th>
+				operators</th>
+			<td>
+				Optionally here you can define array of user ids which are allowed to receive call, ex. technical support operators. Note that you can also define operators on a room level.</td>
+			<td>
+				null</td>
+			<td>
+				array</td>
+		</tr>
+		<tr>
+			<th>
+				allowDuplicates</th>
+			<td>
+				Allow users with the same id to login from different locations at the same time</td>
+			<td>
+				true</td>
+			<td>
+				boolean</td>
+		</tr>        
+        <tr>
+            <th>disableVideo</th>
+            <td>Disable video calls (allow just audio)</td>
+            <td>false</td>
+            <td>boolean</td>
+        </tr>
+        <tr>
+            <th>disableAudio</th>
+            <td>Disable audio calls (allow just video)</td>
+            <td>false</td>
+            <td>boolean</td>
+        </tr>        
+        <tr>
+            <th>limit</th>
+            <td>Maximum number of logged in user per room. Leave empty for unlimited. This option can be specified for particular room in room's configuration options.</td>
+            <td>null</td>
+            <td>integer</td>
+        </tr>
+
+        <tr>
+            <th>file</th>
+            <td>Allow file transfer between peers. This option can be specified for particular room in room's configuration options.</td>
+            <td>false</td>
+            <td>boolean</td>
+        </tr>
+
+        <tr>
+            <th>group</th>
+            <td>Activate conference or group mode for the chat. This option can be specified for particular room in room's configuration options.</td>
+            <td>false</td>
+            <td>boolean</td>
+        </tr>
+
+        <tr>
+            <th>roulette</th>
+            <td>Activate chat roulette mode. This option can be specified for particular room in room's configuration options.</td>
+            <td>false</td>
+            <td>boolean</td>
+        </tr>
+        
+        <tr>
+            <th>desktopShare</th>
+            <td>Activate desktop sharing option (available only for chrome using an extension over https in view-only mode). This option can be specified for particular room in room's configuration options.</td>
+            <td>false</td>
+            <td>boolean</td>
+        </tr>
+        
+		<!--<tr>
+			<th>
+				autoRestart</th>
+			<td>
+				Automatically restart server script if crashes or killed</td>
+			<td>
+				false</td>
+			<td>
+				boolean</td>
+		</tr>-->
+		<tr>
+			<th>
+				rooms</th>
+			<td>
+				Array of chat room numbers with defined custom authorization adapters per room:
+				<pre class="prettyprint lang-prettyprint lang-brush: php">
+array(
+    1   =&gt; array(
+        &#39;authAdapter&#39;   =&gt; &#39;MgRTC\Session\AuthSimple&#39;
+    ),
+    2   =&gt; array(
+        &#39;authAdapter&#39;   =&gt; &#39;MgRTC\Session\AuthFacebook&#39;
+    ),
+    3   =&gt; array(
+        &#39;authAdapter&#39;   =&gt; &#39;MgRTC\Session\AuthWordpress&#39;
+    ),
+    4   =&gt array(
+        'authAdapter'   =&gt 'MgRTC\Session\AuthSimple',
+        'operators'     =&gt array(11)
+    ),
+    'test%'   =&gt array(
+        'authAdapter'   =&gt 'MgRTC\Session\AuthSimple',
+        //...
+    )
+)
+</pre>
+                Room ID keys can even take pattern form, ex. <code>'test%'</code> which means that all rooms which ID begins with <strong>test</strong> will have defined options.
+			</td>
+			<td>
+				null</td>
+			<td>
+				array</td>
+		</tr>
+		<tr>
+			<th>
+				wordpress</th>
+			<td>
+				If MgRTC\Session\AuthWordpress active then this is required. Defines directory path to the wordpress installation:
+				<pre class="prettyprint lang-prettyprint lang-brush: php">
+array(
+    &#39;dir&#39;           =&gt; &#39;/path-to-wordpress&#39;
+)
+</pre>
+			</td>
+			<td>
+				null</td>
+			<td>
+				array</td>
+		</tr>
+		<tr>
+			<th>
+				facebook</th>
+			<td>
+				If MgRTC\Session\AuthFacebook active then this is required. Defines facebook app information of a custom app on <a href="https://developers.facebook.com/apps/" target="_blank">Facebook platform</a>. Please read <a href="https://developers.facebook.com/docs/facebook-login/getting-started-web/" target="_blank">this tutorial</a> about how to create custom facebook login app.
+				<pre class="prettyprint lang-prettyprint lang-brush: php">
+array(
+    &#39;appId&#39;         =&gt; &#39;your-app-id&#39;,
+    &#39;secret&#39;        =&gt; &#39;your-app-secret&#39;
+)
+</pre>
+			</td>
+			<td>
+				null</td>
+			<td>
+				array</td>
+		</tr>
+        <tr>
+            <th>simple</th>
+            <td>
+                If MgRTC\Session\AuthSimple active you can define here list of authorized members
+                <pre class="prettyprint lang-brush: php">
+array(
+    'allowAnonim'   => true,
+    'members'       => array(
+        array('id' => 11, 'username' => 'operator1', 'password' => 'operator1', 'name'   => 'Tech Support')
+    )
+)
+</pre>
+                When <strong>allowAnonim</strong> is true no username/password is required to login
+            </td>
+            <td>null</td>
+            <td>array</td>
+        </tr>
+	</tbody>
+</table>
+</section>
+        
+<section id="custom_authorization">
+	<div class="page-header"><h3>Custom Authorization</h3><hr class="notop"></div>
+    <p>If you need to implement custom login (authorization) mechanism, ex. in order to connect Video Chat to your custom CMS,
+        you will need to develop custom authorization plugin and activate it in <em>config.php</em> <strong>authAdapter</strong>.
+        All your class has to do is implement interface <strong>AuthInterface</strong> which has single method:</p>
+    <pre class="prettyprint lang-brush: php">
+function authUser(ConnectionInterface $conn, array $cookies);
+</pre>
+    <p>The function should inspect <code>$cookies</code> array and conclude if an user is logged in and if yes return array with user info:</p>
+    <pre class="prettyprint lang-brush: php">
+return array(
+    'provider'      => 'your cmsname',
+    'id'            => 'user unique id',
+    'email'         => 'user email',
+    'name'          => 'user name'
+);
+</pre>
+    <p>If an user is not logged in, the function should return <em>null</em></p>
+    <p>If you need to access settings from <strong>config.php</strong> you can do that via:</p>
+    <code>$conn->Config</code>
+    <p>As examples or templates you can use classes: <em>AuthSimple</em>, <em>AuthFacebook</em> or <em>AuthWordpress</em></p>
+    <p>On the client side you can also customize login functionality. Take a look at <strong>login</strong> parameter in the <a href="#options">client options</a>. For example, if you customize this function you can integrate your own login dialog. Inside <a href="#examples">examples section</a>, check <em>Tech. support operator</em> code for a custom login dialog example.</p>
+</section>        
+        
+<section id="media_issues">
+	<div class="page-header"><h3>Media Issues</h3><hr class="notop"></div>
+        <p>If you are having problems with audio and/or video between some peers, the problem is probably related to NATs/firewalls in between.
+            Webrtc leverages technology <a href="https://en.wikipedia.org/wiki/STUN" target="_blank">STUN</a>/<a href="https://en.wikipedia.org/wiki/Traversal_Using_Relays_around_NAT" target="_blank">TURN</a> to help peers find the shortest path for media channel. While STUN servers enable direct p2p communication, TURN is there to help even if that fails and it's included in media traffic.
+            Longer initialization snippet of jquery plugin can solve the problem since it involves more STUN/TURN options:
+        </p>
+        <pre class="prettyprint lang-brush: javascript">
+$('#mgVideoChat').mgVideoChat({
+    wsURL: 'ws://yourdomain:your_port?room=your_room',
+    rtc: {
+        // Holds the STUN server to use for PeerConnections.
+        pcConfig: {
+            iceServers: [
+                {"url": "stun:stun.l.google.com:19302"},
+                {"url": "stun:stun.services.mozilla.com"},
+                {
+                    "url": "turn:8.34.221.6:3478",
+                    "credential": "rIBICQW97vDh44NZdx5R2eDI6Yw=",
+                    "username": "29227155:1387612335"
+                },
+                {
+                    "url": "turn:8.34.221.6:3479",
+                    "credential": "rIBICQW97vDh44NZdx5R2eDI6Yw=",
+                    "username": "29227155:1387612335"
+                },
+                {
+                  "url": "turn:8.34.221.6:3478?transport=udp",
+                  "credential": "GEJJpHaSTpA7dRNBD2igwjoAB7E=",
+                  "username": "48759000:1387612369"
+                },
+                {
+                  "url": "turn:8.34.221.6:3478?transport=tcp",
+                  "credential": "GEJJpHaSTpA7dRNBD2igwjoAB7E=",
+                  "username": "48759000:1387612369"
+                },
+                {
+                  "url": "turn:8.34.221.6:3479?transport=udp",
+                  "credential": "GEJJpHaSTpA7dRNBD2igwjoAB7E=",
+                  "username": "48759000:1387612369"
+                },
+                {
+                  "url": "turn:8.34.221.6:3479?transport=tcp",
+                  "credential": "GEJJpHaSTpA7dRNBD2igwjoAB7E=",
+                  "username": "48759000:1387612369"
+                }
+            ]
+        },
+        pcConstraints: {"optional": [{"DtlsSrtpKeyAgreement": true}]},
+        offerConstraints: {"optional": [], "mandatory": {}},
+        mediaConstraints: {"audio": true, "video": true},
+        sdpConstraints: {
+            'mandatory': {
+                'OfferToReceiveAudio': true,
+                'OfferToReceiveVideo': true
+            }
+        },
+        audio_receive_codec: 'opus/48000'
+    }
+});
+</pre>
+    <p>basically just add <em>rtc</em> options to your existing setup.</p>
+    <p>If needed you can run your own STUN/TURN servers, just go for <a href="https://code.google.com/p/coturn/" target="_blank">this open-source project</a> and check this <a href="#Installing-COTURN-server">description</a></p>
+            
+            <h2 id="Installing-COTURN-server">Installing COTURN server</h2>
+            <p><strong>coturn</strong> is open-source TURN/STUN solution available at <a href="https://code.google.com/p/coturn/" target="_blank">https://code.google.com/p/coturn/</a>. We recommend installing and running this server as explained <a href="http://www.furorteutonicus.eu/2014/09/30/choosing-and-using-coturn-as-a-stun-and-turn-server-for-ice/" target="_blank">here</a>.</p>
+            <p>For authorization we recommend using configuration options <code>use-auth-secret</code>, <code>static-auth-secret</code>, <code>realm</code>.<br>
+                In our source code you can find implementation for <a href="http://tools.ietf.org/html/draft-uberti-behave-turn-rest-00" target="_blank">Turn REST API</a> in folder <em>source/turn-rest-api</em> which can be used as temporary credentials provider. Please update <code>config.php</code> with relevant settings.</p>
+                
+            <pre class="prettyprint lang-brush: php">
+$ip = 'your server ip';
+return array(
+    'allowNoOrigin'         => true, //allow access when client does not provide origin header
+    'secret'                => 'your_secret', //the same as "static-auth-secret" from /etc/turnserver.conf
+    'users'                 => array('your_username'), //usernames
+    'origins'               => array('http://www.yourserver.com', 'https://www.yourserver.com'), //allowed origins
+    'uris'                  => array("turn:$ip:3478?transport=tcp", "turn:$ip:3478?transport=udp"), //turn/stun uris
+    'ttl'                   => 86400 //time to live in secs for provided temporary credentials
+);
+</pre>
+            
+   <p>The client side should first make ajax call to obtain list of TURN uris and then initiate Magnoliyan Chat Client. Please take a look at provided <a href="#Local-TURN--coturn--server">example</a>.</p>
+
+
+</section>        
+        
+<section id="examples">
+	<div class="page-header"><h3>Examples</h3><hr class="notop"></div>
+<h3>
+	Simple Authorization</h3>
+<p>
+	<a href="source/client/demos/simple/" target="_blank">VIEW DEMO</a></p>
+<br>
+<p>
+	This authorization is for demonstration purposes only. It should not be used in production. It features simple popup dialog which saves identity to a cookie which is read and validated by Simple authorization server side adapter.</p>
+<pre class="prettyprint lang-prettyprint lang-brush: html">
+&lt;script src=&quot;mgVideoChat/mgVideoChat-1.13.0-min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+    $(&#39;#mgVideoChat&#39;).mgVideoChat({
+        wsURL: &#39;ws://www.magnoliyan.com:8080?room=1&#39;
+    });
+});
+&lt;/script&gt;
+</pre>
+<h3>
+	Facebook Authorization</h3>
+<p>
+	<a href="source/client/demos/facebook/" target="_blank">VIEW DEMO</a></p>
+<br>
+<p>
+	In order to provide facebook login you need to create facebook app related to your domain. Please read <a href="https://developers.facebook.com/docs/facebook-login/getting-started-web/" target="_blank">this tutorial</a> about how to create custom facebook login app.<br>
+	Obviously server side has to have <em>MgRTC\Session\AuthFacebook</em> enabled.</p>
+<pre class="prettyprint lang-prettyprint lang-brush: html">
+&lt;script src=&quot;mgVideoChat/mgVideoChat-1.13.0-min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+    $(&#39;#mgVideoChat&#39;).mgVideoChat({
+        wsURL: &#39;ws://www.magnoliyan.com:8080?room=2&#39;,
+        facebook: {
+            appId      : &#39;your_app_id&#39;, // App ID - update this!
+            channelUrl : &#39;//magnoliyan.com/demos/facebook/channel.html&#39;, // Channel File
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
+        }
+    });
+});
+&lt;/script&gt;
+</pre>
+<h3>
+	Wordpress Authorization</h3>
+<p>
+	<a href="http://www.magnoliyan.com/rtc-video/source/client/demos/wordpress/" target="_blank">VIEW DEMO</a></p>
+<br>
+<p>
+	For this demo we have standard wordpress installation with additional plugins:</p>
+<ul>
+	<li>
+		<a href="http://www.gm-alex.de/projects/wordpress/plugins/user-access-manager/" target="_blank">User Access Manager</a> used to protect page with video chat for members only</li>
+	<li>
+		<a href="http://w-shadow.com/blog/2007/12/13/raw-html-in-wordpress/" target="_blank">Raw HTML</a> used to allow raw html/javascript in a page with video chat included</li>
+</ul>
+<p>
+	The following html/javascript code is activating the jquery plugin and connects video chat to a proper room defined with wordpress authorization class at the server side</p>
+<pre class="prettyprint lang-prettyprint lang-brush: html">
+&lt;!--raw--&gt;
+&lt;link href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;link href=&quot;/rtc-video/source/client/mgVideoChat/mgVideoChat-1.13.0.css&quot; rel=&quot;stylesheet&quot; /&gt;
+
+&lt;div id=&quot;mgVideoChat&quot;&gt;&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- Video Chat --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/rtc-video/source/client/mgVideoChat/mgVideoChat-1.13.0-min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function(){
+    $(&#39;#mgVideoChat&#39;).mgVideoChat({
+        wsURL: &#39;ws://www.magnoliyan.com:8080/rtc-video/source/client/demos/wordpress/?room=3&#39;
+    });
+});
+&lt;/script&gt;
+&lt;!--/raw--&gt;
+</pre>
+            <p>
+                Please check <code>wsURL</code> parameter. The part <em>/video-chat-pro/source/client/demos/wordpress/</em> is path of our wp installation,
+                so you will need to adopt it to your case. If your wp is installed directly in domain root, then just have <code>/</code>
+            </p>
+            
+            
+            <h4>Wordpress HTTPS</h4>
+            <p>Unfortunatelly, only text chat will work over http, you will need to setup https installation. We still suggest making all work as http then upgrade to https.<br>
+            Please read <a href="#HTTPS,-SSL,-WSS">here general HTTPS</a> instructions and then continue with the rest here specific for wordpress.</p>
+            
+            <p>Unfortunatelly, things are even more complicated for WP. You will need to alter <code>wsURL</code> parameter to be something like:</p>
+            <pre class="prettyprint lang-brush: html">wsURL: 'wss://www.magnoliyan.com/video-chat-pro/source/client/demos/wordpress/wss/?room=3'</pre>
+            <p>Again, mind the path! It's your wp installation root url path with appended <code>/wss/</code></p>
+            
+            <p>Then in your apache's domain config file you need additional proxy rule (if you wp is installed in the domain directly then you don't need this additional rule):</p>
+            <code>ProxyPass /video-chat-pro/source/client/demos/wordpress/wss/ ws://www.magnoliyan.com:8080/</code>
+            <p>and reload or restart apache!</p>
+            
+            <div class="alert alert-warning" role="alert">
+                Make sure to use your own domain and paths.
+            </div> 
+            
+
+            <h3>Private rooms</h3>
+            <a href="source/client/demos/private/" target="_blank">VIEW DEMO</a><br>
+
+            <p>This demo explains how you can create room numbers on the fly so nobody else but visitors could know the room number.</p>
+            <pre class="prettyprint lang-brush: javascript">
+//get query string param
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+//update query strung parameter
+function updateQueryStringParameter(uri, key, value) {
+    var re = new RegExp("([?|&])" + key + "=.*?(&|$)", "i");
+    var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+    if (uri.match(re)) {
+        return uri.replace(re, '$1' + key + "=" + value + '$2');
+    }
+    else {
+        return uri + separator + key + "=" + value;
+    }
+}
+//get random number
+function getRandomInt (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+$(document).ready(function(){
+    //read chat room
+    var room = getParameterByName('room');
+    //no private chat room?
+    if(!room){
+        //get one
+        room = getRandomInt(1000, 100000);
+        //redirect to chat room url
+        window.location.href = updateQueryStringParameter(window.location.href,'room',room);
+    }
+    $('#privateUrl').text(window.location.href);
+    //init video chat
+    $('#mgVideoChat').mgVideoChat({
+        wsURL: 'ws://www.magnoliyan.com:8080?room=' + room
+    });
+});
+</pre>
+
+            <h3>Tech Support</h3>
+            <p>This demo explains how you <strong>operators</strong> configuration option to make tech. support page where visitors do not have to login and operators have to provide user/pass.<br>
+                Here operators should login from <a href="source/client/demos/support/operator.html" target="_blank">here</a><br>
+                and using different browsers you can login other users from <a href="source/client/demos/support/" target="_blank">here</a><br>
+            </p>
+
+
+            <p>Here's operators page code:</p>
+            <pre class="prettyprint lang-brush: html">
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;page-header&quot;&gt;
+        &lt;h1&gt;Magnoliyan Video Chat &lt;small&gt;Tech Support&lt;/small&gt;&lt;/h1&gt;
+        &lt;p&gt;User operator1/operator1 for demo login&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;mgVideoChat&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;operatorLoginDialog&quot; class=&quot;modal fade&quot; data-focus-on=&quot;input:first&quot; style=&quot;display: none&quot;&gt;
+    &lt;div class=&quot;modal-dialog&quot;&gt;
+        &lt;div class=&quot;modal-content&quot;&gt;
+            &lt;div class=&quot;modal-header&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/button&gt;
+                &lt;h4 class=&quot;modal-title&quot;&gt;Login&lt;/h4&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;modal-body&quot;&gt;
+                &lt;label class=&quot;sr-only&quot; for=&quot;userName&quot;&gt;Username&lt;/label&gt;
+                &lt;input id=&quot;userName&quot; class=&quot;form-control&quot; type=&quot;text&quot; data-tabindex=&quot;1&quot; placeholder=&quot;Username&quot;&gt;
+                &lt;label class=&quot;sr-only&quot; for=&quot;userName&quot;&gt;Password&lt;/label&gt;
+                &lt;input id=&quot;password&quot; class=&quot;form-control&quot; type=&quot;password&quot; data-tabindex=&quot;2&quot; placeholder=&quot;Password&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;modal-footer&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-primary login&quot;&gt;Login&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            <pre class="prettyprint lang-brush: javascript">
+//set cookie via javascript
+function setCookie( cookieName, cookieValue, days, domain){
+    var domainString = domain ? ("; domain=" + domain) : '';
+    document.cookie = cookieName + "=" + encodeURIComponent(cookieValue) + "; max-age=" + (60 * 60 * 24 * days) + "; path=/" + domainString;
+};
+
+$(document).ready(function(){
+    //focus username in dialog
+    $('#operatorLoginDialog').on('shown.bs.modal',function(){
+        $('#operatorLoginDialog').find('#userName').focus();
+    });
+    //execute on login
+    var onLogin = function(){
+        if($('#operatorLoginDialog').find('#userName').val()){
+            //set cookies for the server
+            setCookie('mgVideoChatSimpleUser', $('#operatorLoginDialog').find('#userName').val(), 30, window.location.host);
+            setCookie('mgVideoChatSimplePass', $('#operatorLoginDialog').find('#password').val(), 30, window.location.host);
+            $('#operatorLoginDialog').modal('hide');
+            //reload to use new cookies
+            window.location.reload();
+        }
+    };
+    //submit on enter key
+    $('#operatorLoginDialog').find('#userName,#password').keypress(function(e){
+        if (e.keyCode === 13) {
+            onLogin();
+            return false;
+        }
+    })
+    $('#operatorLoginDialog').find('button.login').click(onLogin);
+});
+
+//init video chat
+$(document).ready(function(){
+    $('#mgVideoChat').mgVideoChat({
+        wsURL: 'ws://www.magnoliyan.com:8080?room=4',
+        login: function(callback){
+            $('#operatorLoginDialog').modal('show');
+        }
+    });
+});
+</pre>
+            <p>Visitor's page is identical simple demo, just enters room 4.</p>
+            <p>And here's the server side relevant config:</p>
+            <pre class="prettyprint lang-brush: php">
+'simple'            => array(
+    'allowAnonim'   => true,
+    'members'       => array(
+        array('id' => 11, 'username' => 'operator1', 'password' => 'operator1', 'name'   => 'Tech Support')
+    )
+),
+'rooms'             => array(
+    4   => array(
+        'authAdapter'   => 'MgRTC\Session\AuthSimple',
+        'operators'     => array(11)
+    )
+)
+</pre>
+
+            <h3>Group chat</h3>
+            <a href="source/client/demos/group/" target="_blank">VIEW DEMO</a><br>
+            <p>
+                This demo explains how you can activate <strong>group</strong> or conference mode for a room.<br>
+                You should probably limit the number of user per chat room in this case since the network bandwidth per peer is limited and will not be able to handle too many video/audio connections.<br>
+                This server side configuration snippet activates group mode:
+            </p>
+            <pre class="prettyprint lang-brush: php">
+'rooms'             => array(
+    //...
+    5   => array(
+        'authAdapter'   => 'MgRTC\Session\AuthSimple',
+        'group'         => true,
+        'limit'         => 3
+    )
+</pre>
+            <p>and client side:</p>
+            <pre class="prettyprint lang-brush: javascript">
+//init video chat
+$(document).ready(function(){
+    $('#mgVideoChat').mgVideoChat({
+        wsURL: 'ws://www.magnoliyan.com:8080?room=5'
+    });
+});
+</pre>
+            
+            <h3>Group private chat</h3>
+            <a href="http://www.magnoliyan.com/video-chat-pro/source/client/demos/private_group/" target="_blank"  role="button">VIEW DEMO</a><br>
+            <p>
+                This example is special &quot;combination&quot; of private and group features from previous examples.<br>
+                Room IDs are created on the fly and server side configuration defines options for room IDs which match defined pattern. This means that all dynamically generated ids which match room ID pattern will have these options
+                This server side configuration snippet:
+            </p>
+            <pre class="prettyprint lang-brush: php">
+'rooms'             => array(
+    //...
+    'group_%'   => array(
+        'authAdapter'   => 'MgRTC\Session\AuthSimple',
+        'group'         => true,
+        'limit'         => 3
+    )
+</pre>
+            Note that pattern <code>group_%</code> will match all group ids beginning with <strong>group_</strong>.<br>
+            <p>Client side:</p>
+            <pre class="prettyprint lang-brush: javascript">
+$(document).ready(function(){
+    //read chat room
+    var room = getParameterByName('room');
+    //no private chat room?
+    if(!room){
+        //get one
+        room = 'group_' + getRandomInt(1000, 100000);
+        //redirect to chat room url
+        window.location.href = updateQueryStringParameter(window.location.href,'room',room);
+    }
+    $('#privateUrl').text(window.location.href);
+    //init video chat
+    $('#mgVideoChat').mgVideoChat({
+        wsURL: 'ws://' + wsDomain + ':' + wsPort + '?room=' + room
+    });
+});
+</pre>
+            
+<h3>Invite group/private chat</h3>
+            <a href="http://www.magnoliyan.com/video-chat-pro/source/client/demos/invite/" target="_blank" role="button">VIEW DEMO</a><br>
+            <p>
+                This demo demonstrates <a href="#Scripting">scripting</a> capabilites of mg jquery plugin.<br>
+                There's independent button which an user can use to invite some of other connected visitors to join his group/private chat.<br>
+                Group/private rooms share the same configuration as previous example.</p>
+            
+            <p>But the main part is done on the client side. If query parameter <code>room</code> is not provided, we use default value <code>1</code> and we show regular chat.<br>
+                <em>Invate group</em> triggers dialog which let you choose friends to join your private group chat.<br>
+                They will receive link to the same page, but now with dynamically generated <code>room</code> parameter.
+            </p>
+            <pre class="prettyprint lang-brush: javascript">
+var rtc, mgChat, allFriends = [];
+
+//render friends select options
+function renderFriends(){
+    $('#friends').html('');
+    for (var connectionId in allFriends) {   
+         $('#friends')
+             .append($("&lt;option&gt;&lt;/option&gt;")
+             .attr("value",connectionId)
+             .text(allFriends[connectionId]['data']['userData']['name'])); 
+    };
+}
+
+//get query string param
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+//update query strung parameter
+function updateQueryStringParameter(uri, key, value) {
+    var re = new RegExp("([?|&])" + key + "=.*?(&|$)", "i");
+    var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+    if (uri.match(re)) {
+        return uri.replace(re, '$1' + key + "=" + value + '$2');
+    }
+    else {
+        return uri + separator + key + "=" + value;
+    }
+}
+
+function getInviteUrl(){
+    return updateQueryStringParameter(window.location.href, 'room', generateRoomId());
+}
+
+//get random number
+function getRandomInt (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}            
+
+function generateRoomId(){
+    return 'group_' + getRandomInt(1000, 100000);
+}
+
+$(document).ready(function(){
+
+    //read chat room
+    var room = getParameterByName('room');
+    if(!room){
+        room = '1';
+    } else {
+        $('#inviteDialogBtn').remove();
+    }                
+    //chat object itself
+    mgChat = $('#mgVideoChat').mgVideoChat({
+        wsURL: wsUrlDefault + '?room=' + room
+    });
+
+    //store connections in global variable
+    $('#mgVideoChat').mgVideoChat('on','connections',function(connections){
+        allFriends = connections;
+        //console.log('connections event', allFriends);
+    });
+
+    //invite dialog
+    $('#inviteDialogBtn').click(function(){
+        renderFriends();
+        $('#inviteDialog').modal('show');
+    });
+
+    //chosen plugin for multiselect
+    $('#inviteDialog').on('shown.bs.modal', function () {
+        //rebuild it on dialog popup
+        $('#friends').chosen('destroy').chosen();
+    });                               
+
+    $('#inviteBtn').click(function(){
+        var url = getInviteUrl();
+        var message = $("#invitationText").val() + ' ' + url;
+        if($('#friends').find(":selected").length == 0){
+            swal({title:"Error", text: "You have to select a friend!", type: "error" });
+            return;
+        }
+        $('#friends').find(":selected").each(function(){
+            mgChat.getRtc().chatMessage($(this).attr('value'), message);
+        });
+        swal({
+            title:"Invited",
+            text: 'Your friends are invited to join you at <a href="' + url + '">' + url + '</a>',
+            type: "success",
+            html: true,
+            showCancelButton: false,
+            confirmButtonText: "Join them now",
+            closeOnConfirm: true
+        }, function(){
+            window.open(url,'_blank');
+        });
+        $('#inviteDialog').modal('hide');
+    });
+});
+</pre>            
+
+            <h3>Roulette chat</h3>
+            <a href="source/client/demos/roulette/" target="_blank">VIEW DEMO</a><br>
+            <p>
+                This demo explains how you can activate <strong>roulette</strong> mode for a room.<br>
+                In this mode peers randomly connect with each other by clicking <em>NEXT</em> button.<br>
+                This server side configuration snippet activates roulette mode:
+            </p>
+            <pre class="prettyprint lang-brush: php">
+'rooms'             => array(
+    //...
+    6   => array(
+        'authAdapter'   => 'MgRTC\Session\AuthSimple',
+        'roulette'         => true
+    )
+</pre>
+            <p>and client side:</p>
+            <pre class="prettyprint lang-brush: javascript">
+//init video chat
+$(document).ready(function(){
+    $('#mgVideoChat').mgVideoChat({
+        wsURL: 'ws://www.magnoliyan.com:8080?room=6'
+    });
+});
+</pre>
+
+            <h3>File transfer</h3>
+            <a href="source/client/demos/file/" target="_blank">VIEW DEMO</a><br>
+            <p>
+                This demo explains how you can activate <strong>file transfer</strong>.<br>
+                In this mode peers are able to send small files p2p if both sides use the same browser.<br>
+                This server side configuration snippet activates file transfer:
+            </p>
+            <pre class="prettyprint lang-brush: php">
+'rooms'             => array(
+    //...
+    7   => array(
+        'authAdapter'   => 'MgRTC\Session\AuthSimple',
+        'file'         => true
+    )
+</pre>
+            <p>and client side:</p>
+            <pre class="prettyprint lang-brush: javascript">
+//init video chat
+$(document).ready(function(){
+    $('#mgVideoChat').mgVideoChat({
+        wsURL: 'ws://www.magnoliyan.com:8080?room=7',
+        fileMaxSize: 512000 //500KB max file size
+    });
+});
+</pre>
+            
+            <h3>Events API</h3>           
+            <a href="source/client/demos/api/" target="_blank">VIEW DEMO</a><br>
+            <p>This example demonstrates how to leverage mgVideoChat javascript events api to customize the interface.</p>
+            <p>The key is to attach custom event handler on existing mgVideoChat plugin:</p>
+            <pre class="prettyprint lang-brush: javascript">
+$(document).ready(function(){
+    $('#mgVideoChat').mgVideoChat({
+        wsURL: 'ws://' + wsDomain + ':' + wsPort + '?room=1'
+    });
+});
+//on connections change
+$('#mgVideoChat').mgVideoChat('on','connections',function(connections){
+    console.log('[mgVideoChat.connections]fired',connections);
+    if(!$.isEmptyObject(connections)){
+        $("#supportWrapper .panel-title a").text("Support online");
+    }else{
+        $("#supportWrapper .panel-title a").text("Support offline");
+    }
+});
+</pre>
+            <p>Please take a look at example's source code for more details.</p>            
+            
+            <h3>Internationalization (I18N)</h3>           
+            <a href="http://www.magnoliyan.com/video-chat-pro/source/client/demos/i18n/" target="_blank" >VIEW DEMO</a><br>
+            <p>This example demonstrates how to customize labels, messages etc. for wanted language.</p>
+            <p>All you have to do is update values of the key/value pairs in the global variable:</p>
+            <pre class="prettyprint lang-brush: javascript">
+$.fn.mgVideoChat.translate = {    
+    'Your browser does not support websocket.':  'Ihr Browser unterstützt keine WebSocket.',
+    'Your browser does not support PeerConnections.':  'Ihr Browser unterstützt keine PeerConnections.',
+    'Your browser does not support user media.':  'Ihr Browser unterstützt keine Benutzermedien.',
+//...
+}
+</pre>
+            <p>You could do that inline, in the same file where you use mgVideoChat object, or in external script, but do it before the plugin is rendered.</p>
+            <p>All available translation keys you can find in the <a href="source/client/demos/common/js/mgvc.de.js" target="_blank">file</a></p>
+            
+            
+<h3>TURN server</h3>           
+<a href="source/client/demos/turnservers/" target="_blank" role="button">VIEW DEMO</a><br>
+<p>This example demonstrates how to integrate with third party SAAS provider <a href="http://www.turnservers.com/" target="_blank">www.turnservers.com</a> in order to overcome media transport issue through NAT and firewalls.</p>
+
+<p>Make sure to open account with turnservers.com first and obtain API key for your domains.</p>
+
+<pre class="prettyprint lang-brush: html">
+&lt;script src=&quot;//api.turnservers.com/api.js?key=your_api_key&quot;&gt;&lt;/script&gt;
+</pre>
+
+<pre class="prettyprint lang-brush: javascript">
+// This callback function will give us the iceServers:
+window.turnserversDotComAPI.iceServers(function(data) {
+    //console.log(data);
+    $('#mgVideoChat').mgVideoChat({
+        wsURL: 'ws://' + wsDomain + ':' + wsPort + '?room=1',
+        rtc: {
+            pcConfig: {
+                iceServers: data
+            },
+            pcConstraints: {"optional": [{"DtlsSrtpKeyAgreement": true}]},
+            offerConstraints: {"optional": [], "mandatory": {}},
+            mediaConstraints: {"audio": true, "video": true},
+            sdpConstraints: {
+                'mandatory': {
+                    'OfferToReceiveAudio': true,
+                    'OfferToReceiveVideo': true
+                }
+            },
+            audio_receive_codec: 'opus/48000'
+        }                        
+    });
+});
+</pre>
+
+<p>Please take a look at example's source code for more details.</p>
+
+<h3 id="Local-TURN--coturn--server">Local TURN (coturn) server</h3>           
+<a href="http://www.magnoliyan.com/video-chat-pro/source/client/demos/coturn/" target="_blank" role="button">VIEW DEMO</a><br>
+
+<p>This example demonstrates how to integrate with your local <a href="https://code.google.com/p/coturn/" target="_blank">coturn</a> in order to overcome media transport issue through NAT and firewalls.</p>
+
+<p>Please <a href="#Installing-COTURN-server">read first</a> how to install and run coturn server.</p>
+
+<pre class="prettyprint lang-brush: javascript">
+// This callback function will give us the iceServers:
+$.ajax({
+    url: 'url_to_turn_rest_api/turn.php?username=defined_username',
+    xhrFields: {
+        withCredentials: false
+    },
+    success: function(data){
+        console.log(data);
+        //always add google's stun server
+        var iceServers = [{'url':'stun:stun.l.google.com:19302'}];
+        for(var i in data.uris){
+            iceServers.push({
+                'url': data.uris[i],
+                'username': data.username,
+                'credential': data.password
+            });
+        };
+        console.log(iceServers);
+        $('#mgVideoChat').mgVideoChat({
+            wsURL: 'ws://' + wsDomain + ':' + wsPort + '?room=1',
+            rtc: {
+                pcConfig: {
+                    'iceServers': iceServers
+                },
+                pcConstraints: {"optional": [{"DtlsSrtpKeyAgreement": true}]},
+                offerConstraints: {"optional": [], "mandatory": {}},
+                mediaConstraints: {"audio": true, "video": true},
+                sdpConstraints: {
+                    'mandatory': {
+                        'OfferToReceiveAudio': true,
+                        'OfferToReceiveVideo': true
+                    }
+                },
+                audio_receive_codec: 'opus/48000'
+            }                        
+        });                        
+    }
+});
+</pre>
+
+<p>Please take a look at example's source code for more details.</p>
+
+<h3>Desktop sharing</h3>           
+<a href="https://www.magnoliyan.com/video-chat-pro/source/client/demos/desktop_capture/" target="_blank" role="button">VIEW DEMO</a><br>
+<p>This example demonstrates ability to share your desktop with a peer. Desktop sharing comes with some limitations:</p>
+<ul>
+    <li>Sharing party must run Google Chrome</li>
+    <li>Sharing is available only via custom Google Chrome extension (source code included)</li>
+    <li>Sharing is allowed only via secure https</li>
+    <li>Sharing is available only in view-only mode</li>
+</ul>
+
+<pre class="prettyprint lang-brush: javascript">
+$(document).ready(function(){
+    $('#mgVideoChat').mgVideoChat({
+        wsURL: 'wss://' + wsDomain + '/wss/?room=1',
+        chromeExtensionId: 'jfepeciommhoefhfacjdpcmnclekenag'
+    });
+});
+</pre>
+
+<p>Note that server must run over <code>wss</code> protocol. In order to achive this we enabled Apache's <strong>proxy_wstunnel</strong>. In our domain .conf we added:</p>
+
+<pre class="prettyprint">
+SSLProxyEngine On
+ProxyPass /wss/ ws://www.magnoliyan.com:8080/
+</pre>
+
+<p>It's important to include the same proxy path, e.g. <code>/wss/</code> in <code>wsURL</code> parameter.</p>
+<p>At the server since of our script we need to enable dekstop sharing for this room in <code>config.php</code>:</p>
+
+<pre class="prettyprint lang-brush: php">
+1   => array(
+    //...
+    'desktopShare'  => true
+)
+</pre>
+
+<h4>Google Chrome Extension</h4>
+
+<p>In order to make this work you will have to publish your custom branded Google Extension. A sharer is obliged to install this extension.
+    The source code for the extension is provided at <code>source/chrome-ext</code>. You should update file <code>manifest.json</code> and <code>icon.png</code> with your custom info.<br>
+    Make sure to update <code>content_scripts/matches</code> with a domain of your website where the script will be hosted.<br>
+    After all is updated create zip file of all extension files and publish at <a href="https://chrome.google.com/webstore/developer/dashboard" target="_blank">Chrome WebStore Developer Dashboard</a>. Learn more <a href="https://developer.chrome.com/webstore/publish" target="_blank">here</a>.<br>
+    Don't forget to update <code>chromeExtensionId</code> in javascript setup.
+</p>
+
+<p>Please take a look at example's source code for more details.</p>            
+            
+</section>
+<section id="sources_and_credits">
+	<div class="page-header"><h3>Sources and Credits</h3><hr class="notop"></div>
+<p>
+	This app uses the following Javascript libraries:</p>
+<ul>
+	<li>
+		<a href="http://jquery.com/" target="_blank">jQuery</a></li>
+	<li>
+		<a href="http://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+</ul>
+<p>
+	This app uses the following PHP library:</p>
+<ul>
+	<li>
+		<a href="http://socketo.me/" target="_blank">Ratchet</a></li>
+</ul>
+<p>
+	This app is inspired by the following projects:</p>
+<ul>
+	<li>
+		<a href="https://apprtc.appspot.com" target="_blank">App RTC</a></li>
+	<li>
+		<a href="https://github.com/webRTC/webRTC.io" target="_blank">webRTC</a></li>
+</ul>
+
+<p>Demo bootstrap themes by <a href="http://bootswatch.com/" target="_blank">Bootswatch</a></p>
+
+</section>
+
+	</div>
+</body>
+</html>

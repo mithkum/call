@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Turn Client</title>
+    </head>
+
+    <body>
+        <button id="turnButton">Call</button>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+            $('#turnButton').click(function(){
+                $.ajax({
+                    crossDomain: true,
+                    url: 'turn.php?username=magnoliyan',
+                    xhrFields: {
+                        withCredentials: false
+                    },
+                    success: function(data){
+                        console.log(data);
+                    }
+                });
+            });            
+        </script>
+    </body>    
+</html>

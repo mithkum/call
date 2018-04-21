@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Magnoliyan Video Chat</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">        
+        <link rel="stylesheet" href="../../mgVideoChat/mgVideoChat-1.13.0.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>MgVChat <small>TURN</small></h1>
+            <div class="alert alert-info" role="alert">
+                If no one else is in the room, please open the same page in other tab to do self-test.
+            </div>
+        </div>
+        <div id="mgVideoChat"></div>
+        <!-- Load the TURN Server API: -->
+        <script src="//api.turnservers.com/api.js?key=RMkQobRddRzhNvkjrasqolAmzQdkRyjx"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+        <!-- Video Chat -->
+        <script src="../../mgVideoChat/mgVideoChat-1.13.0-min.js"></script>
+        <script src="../common/js/menu.js"></script>
+        <script>
+                // This callback function will give us the iceServers:
+                window.turnserversDotComAPI.iceServers(function(data) {
+                    console.log(data);
+                    
+                    $('#mgVideoChat').mgVideoChat({
+                        wsURL: wsUrlDefault + '?room=1',
+                        rtc: {
+                            pcConfig: {
+                                iceServers: data
+                            },
+                            pcConstraints: {"optional": [{"DtlsSrtpKeyAgreement": true}]},
+                            offerConstraints: {"optional": [], "mandatory": {}},
+                            mediaConstraints: {"audio": true, "video": true},
+                            sdpConstraints: {
+                                'mandatory': {
+                                    'OfferToReceiveAudio': true,
+                                    'OfferToReceiveVideo': true
+                                }
+                            },
+                            audio_receive_codec: 'opus/48000'
+                        }                        
+                    });
+                });
+        </script>      
+    </body>
+</html>

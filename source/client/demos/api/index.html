@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Magnoliyan Video Chat</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../mgVideoChat/mgVideoChat-1.13.0.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>MgVChat <small>Events API</small></h1>
+            <div class="alert alert-info" role="alert">
+                <p>This example demonstrates how to leverage mgVideoChat javascript events api to customize the interface.</p>
+                <p>Take a look at bottom right section, if support is offline (no one else is in the room), please open the same page in other tab, click and login, to do self-test.</p>                    
+            </div>
+            
+            <div class="panel-group" id="supportWrapper">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#supportWrapper" href="#supportPanel">Support</a>
+                            <span class="label"></span>
+                        </h4>
+                    </div>
+                    <div id="supportPanel" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div id="mgVideoChat"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>             
+        </div>             
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+        <!-- Video Chat -->
+        <script src="../../mgVideoChat/mgVideoChat-1.13.0-min.js"></script>
+        <script src="../common/js/menu.js"></script>
+        <script>
+            $(document).ready(function(){
+                document.cookie = 'mgVideoChatSimple=User-' + Math.floor((Math.random() * 100000) + 1) + "; max-age=2592000; path=/; domain=" + window.location.hostname;
+                
+                $('#mgVideoChat').mgVideoChat({
+                    wsURL: wsUrlDefault + '?room=1'
+                });
+                //on connections change
+                $('#mgVideoChat').mgVideoChat('on','connections',function(connections){
+                    console.log('[mgVideoChat.connections]fired',connections);
+                    if(!$.isEmptyObject(connections)){
+                        $("#supportWrapper .panel-title a").text("Support online");
+                        $("#supportPanel").data('online',true);
+                    }else{
+                        $("#supportWrapper .panel-title a").text("Support offline");
+                        $("#supportPanel").data('online',false);
+                    }
+                });
+            });
+        </script>      
+    </body>
+</html>
